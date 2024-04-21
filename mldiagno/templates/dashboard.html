@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+</head>
+<body>
+    <h1>Enter Patient Data</h1>
+    <form method="post">
+        {% csrf_token %}
+        <label for="patient_id">Patient ID:</label>
+        <input type="number" id="Patient_ID" name="Patient_ID" required><br>
+
+        <label for="Pregnancies">Number of Pregnancies:</label>
+        <input type="number" id="Pregnancies" name="Pregnancies" required><br>
+
+        <label for="Glucose">Glucose Level:</label>
+        <input type="number" id="Glucose" name="Glucose" step="0.1" required><br>
+
+        <label for="bloodPressure">Blood Pressure:</label>
+        <input type="number" id="BloodPressure" name="BloodPressure" step="0.1" required><br>
+
+        <label for="SkinThickness">Skin Thickness:</label>
+        <input type="number" id="SkinThickness" name="SkinThickness" step="0.1" required><br>
+
+        <label for="Insulin">Insulin Level:</label>
+        <input type="number" id="Insulin" name="Insulin" step="0.1" required><br>
+
+        <label for="BMI">BMI:</label>
+        <input type="number" id="BMI" name="BMI" step="0.1" required><br>
+
+        <label for="DiabetesPedigreeFunction">Diabetes Pedigree Function:</label>
+        <input type="number" id="DiabetesPedigreeFunction" name="DiabetesPedigreeFunction" step="0.001" required><br>
+
+        <label for="Age">Age:</label>
+        <input type="number" id="Age" name="Age" required><br>
+
+        <input type="submit" value="Submit">
+    </form>
+</body>
+</html>
