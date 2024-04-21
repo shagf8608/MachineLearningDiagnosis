@@ -44,3 +44,4 @@ wadllib==1.3.6
 whitenoise==6.6.0
 xdot==1.2
 zipp==1.0.0
+dbus-python==1.3.2
