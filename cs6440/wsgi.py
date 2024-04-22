@@ -11,8 +11,8 @@ import os
 
 from django.core.wsgi import get_wsgi_application
 
-settings_module = "cs6440.deployment" if "WEBSITE_HOSTNAME" in os.environ else 'cs6440.settings'
-
+#settings_module = "cs6440.deployment" if "WEBSITE_HOSTNAME" in os.environ else 'cs6440.settings'
+settings_module = 'cs6440.settings'
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', settings_module)
 
 application = get_wsgi_application()
