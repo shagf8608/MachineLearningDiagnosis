@@ -1,11 +1,12 @@
 import os
 from .settings import *
 from .settings import BASE_DIR
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-ALLOWED_HOSTS = [os.environ["WEBSITE_HOSTNAME"]]
-CSRF_TRUSTED_ORIGINS = ["https://" + os.environ["WEBSITE_HOSTNAME"]]
+
+SECRET_KEY = os.environ['SECRET']
+ALLOWED_HOSTS = [os.environ['WEBSITE_HOSTNAME']]
+CSRF_TRUSTED_ORIGINS = ['https://' + os.environ['WEBSITE_HOSTNAME']]
 DEBUG = False
-SECRET_KEY = os.environ["Secret"]
+
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     "whitenoise.middleware.WhiteNoiseMiddleware",
